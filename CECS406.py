@@ -127,24 +127,3 @@ def plot_loss_accuracy(history):
     
 
 plot_loss_accuracy(history)
-
-
-# In[ ]:
-
-
-y_pred = model.predict(xtest_npArray)
-map_characters = { 0:'IDC(-)', 1: 'IDC(+)'}
-print('/n', sklearn.metrics.classification_report(np.where(ytest_npArray > 0)[1], np.argmax(y_pred, axis = 1), target_names=list(map_characters.values())), sep='')
-
-
-# In[7]:
-
-
-
-
-
-# In[8]:
-
-
-
-
